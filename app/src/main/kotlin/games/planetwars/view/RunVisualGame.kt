@@ -1,6 +1,6 @@
 package games.planetwars.view
 
-import games.planetwars.agents.MyGreedyAgent
+import games.planetwars.agents.SmartGreedyAgent
 import games.planetwars.agents.random.CarefulRandomAgent
 import games.planetwars.core.GameParams
 import games.planetwars.core.GameStateFactory
@@ -11,7 +11,7 @@ fun main() {
     val gameParams = GameParams(numPlanets = 30, maxTicks = 1000)
     val gameState = GameStateFactory(gameParams).createGame()
     val agent1 = CarefulRandomAgent()
-    val agent2 = MyGreedyAgent()
+    val agent2 = SmartGreedyAgent()
     // sub in different agents as needed
     //    val agent1 = PureRandomAgent()
     val gameRunner = GameRunner(agent1, agent2, gameParams)
